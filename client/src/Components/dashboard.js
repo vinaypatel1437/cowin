@@ -29,8 +29,6 @@ function Dashboard() {
                         <th scope="col">Date</th>
                         <th scope="col">Vaccine Name</th>
                         <th scope="col">Center</th>
-                        <th scope="col">Dose 1</th>
-                        <th scope="col">Dose 2</th>
                         <th scope="col">Total</th>
                     </tr>
                 </thead>
@@ -38,16 +36,15 @@ function Dashboard() {
                     {
                         lisst.map((val) => {
                             return (
+                                val.total!="" && val.total!=undefined?
                                 <tr>
                                     <th>{val.datee}</th>
                                     <td>{val.vaccine_name}</td>
                                     <td>{val.center}</td>
-                                    <td>{val.dose1}</td>
-                                    <td>{val.dose2}</td>
                                     <td>{val.total}</td>
                                     {/* <td>{}</td> */}
                                     {/* <td>452012</td> */}
-                                </tr>
+                                </tr>:console.log("Hello")
 
                             )
                         })

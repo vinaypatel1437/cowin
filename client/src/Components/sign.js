@@ -10,7 +10,8 @@ function Signup() {
     const [age, setAge] = useState('')
     const submitHandle = () => {
         Axios.post('http://localhost:3001/signup', { email: email, password: password, age: age }).then(() => {
-            alert("Successfull insert");
+            // alert("Successfull insert");
+            console.log("done")
         })
     };
     return (

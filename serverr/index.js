@@ -41,22 +41,19 @@ app.post('/user', (req, res) => {
     vaccineO = JSON.parse(vaccineO)
     db.query("DELETE FROM vaccine")
     for (let i = 0; i < vaccineO.length; i++) {
-        let vaccinename, dose1, dose2, total, datee, center;
-        if (vaccineO[i].VaccineName == undefined && vaccineO[i].Dose1 == undefined && vaccineO[i].Dose2 == undefined && vaccineO[i].total == undefined) {
+        let vaccinename, total, datee, center;
+        if (vaccineO[i].VaccineName == undefined  && vaccineO[i].total == undefined) {
             vaccinename = "NA";
-            dose1 = "NA";
-            dose2 = "NA";
             total = "NA";
         } else {
             vaccinename = vaccineO[i].VaccineName;
-            dose1 = vaccineO[i].Dose1;
-            dose2 = vaccineO[i].Dose2;
             total = vaccineO[i].Total;
             datee = vaccineO[i].Date;
             center = vaccineO[i].Center;
         }
-        const sqlInsert = "INSERT INTO vaccine (vaccine_name,dose1,dose2,total,datee,center) VALUES (?,?,?,?,?,?)"
-        db.query(sqlInsert, [vaccinename, dose1, dose2, total, datee, center], (err, result) => {
+        const sqlInsert = "INSERT INTO vaccine (vaccine_name,total,datee,center) VALUES (?,?,?,?)"
+        db.query(sqlInsert, [vaccinename, total, datee, center], (err, result) => {
+            console.log(err);
             console.log("resultss")
         });
     }
@@ -115,7 +112,6 @@ app.post('/signup', async (req, res) => {
             else {
                 await connection.query(insert_query, (err, result) => {
                     connection.release();
-
                     if (err) throw (err)
                     req.session.email = email;
                     const options = {
@@ -129,11 +125,9 @@ app.post('/signup', async (req, res) => {
                             console.log(err); return;
                         }
                         console.log("Sent" + " " + info.response)
-                        res.redirect("http://localhost:3000/dash");
                     })
+                    res.redirect("http://localhost:3000/dash");
                     console.log("--------> Created new User");
-
-
                 })
             }
 
@@ -154,7 +148,6 @@ app.post('/login', async (req, res) => {
             if (result.length == 0) {
                 console.log("----> User Does not exists");
                 alert("User Does not exist")
-
             } else {
                 const hasedPass = result[0].password
                 if (await bcrypt.compare(password, hasedPass)) {
