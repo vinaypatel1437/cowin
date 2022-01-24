@@ -1,0 +1,1470 @@
+<html><head>
+
+    <meta charset="UTF-8">
+     <title>Coin Farm - online farm with money withdrawal</title>
+           <meta name="description" content="Coin Farm - online game with real money withdrawal. Buy birds, sell eggs for real money. Your passive income is here.">
+           <meta name="keywords" content="Игра с выводом, денег, вывод денег, money withdrawal, заработок в интернете, investment game, online, вложений, заработать, ферма, денежная ферма, заработать на ферме, golden birds, Coin Farm, golden mine, goldenbirds, moneybirds, money birds, goldenfarm, золотые птички, ферма, игра с выводом денег">
+          <script src="https://hcaptcha.com/1/api.js?explicit&hl=en" async defer></script>
+   
+   
+   <link href="/style/nprogress.css" rel="stylesheet" />
+   <script type="text/javascript" src="/js/nprogress.js"></script>
+   
+          <link href="/style/styles.css?id=132" rel="stylesheet" type="text/css">
+            <link href="/style/style_new.css?id=132" rel="stylesheet" type="text/css">
+        <link href="/style/mobile.css?id=18" rel="stylesheet" type="text/css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+   
+           <script type="text/javascript" src="/js/functions.js"></script>
+             <link rel="icon" type="image/png"  href="/img/birds/king-bird.png">
+   <meta property="og:image" content="https://coin-farm.net/images/promo.png">
+   
+   <meta name="viewport" content="width=device-width,height=1214">
+   <meta name="MobileOptimized" content="width" />
+   
+   <script>
+   function noenter2() {
+     if (window.event && window.event.keyCode == 13){
+   document.getElementById("login1").style.display="none";
+   
+   document.getElementById("login2").style.display="block";
+       setTimeout(function () {
+   
+   document.getElementById("login2").style.opacity="1";
+       }, 50);
+   
+     return !(window.event && window.event.keyCode == 13);
+    }else
+       return true;}
+   
+   
+   
+   
+   function PayPassEnter() {
+     if (window.event && window.event.keyCode == 13){
+   document.getElementById("pay1").style.display="none";
+   
+   document.getElementById("pay2").style.display="block";
+       setTimeout(function () {
+   
+   document.getElementById("pay2").style.opacity="1";
+       }, 50);
+   
+     return !(window.event && window.event.keyCode == 13);
+    }else
+       return true;}
+   
+   
+   function PayPass() {
+   
+   document.getElementById("pay1").style.display="none";
+   
+   document.getElementById("pay2").style.display="block";
+       setTimeout(function () {
+   
+   document.getElementById("pay2").style.opacity="1";
+       }, 50);
+   }
+   </script>
+       </head>
+     <body class="mobile">
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <a href="/" style="display: inline-block;display:none;"><div class="mobile-logo-2"></div></a>
+         <button class="navbar-toggler" id="nav-btn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="nav-balance">
+           <div class="field-ar"><a href="/account/insert">{!BALANCE_B!}</a>  <span style="margin:3px 10px 0px 0px;">[<a href="/account/insert"><b></b></a>]</span></div>
+           <div class="field-ars"><a href="/account/payment">{!BALANCE_P!}</a> <span style="margin:3px 10px 0px 0px;">[<a href="/account/payment"></a>]</span></div>
+         </div>
+   <div style="display:inline-block;vertical-align: top;margin-left:9px;">
+   
+   </div>
+         <div style="float:right;">
+           <div class="nav-account">
+             <span style="margin:3px 10px 0px 0px;">Welcome, <b></b></span>
+           </div>
+           <button onclick="location.href='/signup';" class="new_button st_new_button" style="width: auto !important;padding: 5.6px 19px 7px 19px !important;min-width: 10px;margin-right:2px !important;">Create account</button>
+           <button onclick="location.href='/login';" class="new_button st_new_button" style="width: auto !important;padding: 5.6px 19px 7px 19px !important;min-width: 10px;">Enter</button>
+   
+       </div>
+         <div class="collapse navbar-collapse" id="navbarNav">
+   
+         </div>
+       </nav>
+   <script>
+   $('#nav-btn').click(function() {
+     $('#menu-left').toggleClass('menu-show');
+   });
+   
+   NProgress.start();
+   setTimeout(function() { NProgress.done(); }, 300);
+   
+   function loadPage(href){
+     NProgress.start();
+     setTimeout(function() { NProgress.done(); }, 300);
+     $("#content_block").load(href);
+     clearInterval(interval);
+   };
+   </script>
+   <style>
+   .grecaptcha-badge {
+       visibility: hidden;
+   }
+   .hd-menu {
+       float: left;
+       list-style: none;
+       font-family: "Tahoma";
+       margin: 129.5px 0px 70px 244px;
+       width: 950px;
+   }
+   .cl-left{
+       margin-left: 65px;
+       padding-top: 18px;
+   }
+   .silver-bk_index {
+       width: 682px;
+       margin: 35px 0px 0px -42px;
+       margin-top: 34px;
+   }
+   .cl-right{
+       width: 650px;
+       padding: 21px 0px 0px 96px;
+       margin-bottom: 80px;
+   }
+   
+   .wrap{
+       background: url(/img/bg/wrap-back.png) 0px -10px no-repeat;
+       width: 1426px;
+       position: initial;
+   }
+   .wrap-loop{
+       background: url(/img/bg/tree-loop.jpg) 1292px 46px repeat-y;
+       width: 1426px;
+       zoom: 88%;
+       /*-webkit-transform: scale(0.88);
+       transform: scale(0.88);
+       transform-origin: top; */
+       position: initial;
+   }
+   
+   .logo-1 {
+   position: absolute;
+   width: 266px;
+   height: 118px;
+   margin: 10px 0 0 92px;
+   background: url(/images/logo/logo.png) no-repeat;
+   background-size: 266px 118px;
+   }
+   .logo-2 {
+   position: absolute;
+   width: 224px;
+   height: 152px;
+   margin-left: 99px;
+   top: 91px;
+   background: url(/images/logo/logo.png) no-repeat;
+   background-size: 223px 151px;
+   }
+   .logo-3 {
+   position: absolute;
+   width: 224px;
+   height: 152px;
+   margin-left: 99px;
+   top: 91px;
+   background: url(/images/logo/logo.png) no-repeat;
+   background-size: 223px 151px;
+   }
+   /* 897px 0 0px 604px */
+   a:hover{cursor:pointer;}
+   .g-recaptcha-div, .g-recaptcha-div iframe{
+     -webkit-transform: scale(0.89);
+     transform: scale(0.89);
+   }
+   .g-recaptcha-div div:first-child{
+   width: 445px !important;
+   height: 92px !important;
+   }
+   .recaptcha-note{
+   font-size: 0.90em;
+   display:none;
+   }
+   .h-captcha-div{
+       -webkit-transform: scale(0.89);
+       transform: scale(0.89);
+       transform-origin: 0 0;
+       margin-left: 58px;
+       
+   }
+   .h-captcha-div iframe{
+       width: 365px !important;
+       height: 94px !important;
+       
+       -webkit-backface-visibility: hidden;
+       -ms-transform: translateZ(0); /* IE 9 */
+       -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+       transform: translateZ(0);
+   }
+   
+   iframe:last-child{
+       min-width: 424px !important;
+       min-height: 615px !important;
+       -webkit-transform: scale(0.94);
+       transform: scale(0.94);
+       transform-origin: 0 0;
+   }
+   </style>
+   <div class="wrap-loop">
+   <div class="wrap">
+   <div class="header">
+     <a href="/" style="display: block;"><div class="logo-2"></div></a>
+   <style>
+   
+   .f32 .flag {
+       display: inline-block;
+       height: 32px;
+       width: 32px;
+       vertical-align: middle;
+       line-height: 32px;
+       background: url(/img/flags32.png) no-repeat;
+   }
+   
+   .f32 .ru {
+       background-position: 0 -6208px;
+   }
+   
+   .f32 .en {
+       background-position: 0 -2912px;
+   }
+   
+   .f32 .flag {
+       display: inline-block;
+       height: 32px;
+       width: 32px;
+       vertical-align: middle;
+       line-height: 32px;
+       background: url(/img/flags32.png) no-repeat;
+   }
+   
+   
+       .button_top:hover {
+       background: #b3c20e;
+       color: #ffffff;
+       background-color: -webkit-linear-gradient(top, #b3c20e, #a2b30d);
+       background-color: -moz-linear-gradient(top, #b3c20e, #a2b30d);
+       background-color: -ms-linear-gradient(top, #b3c20e, #a2b30d);
+       background-color: -o-linear-gradient(top, #b3c20e, #a2b30d);
+       background-color: linear-gradient(to bottom, #b3c20e, #a2b30d);
+       border: none;
+       -webkit-box-shadow: 0px 4px 1px -1px #5B6600;
+       -moz-box-shadow: 0px 4px 1px -1px #5B6600;
+       box-shadow: 0px 4px 1px -1px #5B6600;
+       text-decoration: none;
+   }
+   
+   
+   .button_top:active {
+   
+       border: none;
+       margin-top: -87px;
+       -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+       box-shadow: none;
+       -webkit-transition: all .1s ease;
+       -moz-transition: all .1s ease;
+       -ms-transition: all .1s ease;
+       -o-transition: all .1s ease;
+       transition: all .1s ease;
+   
+   }
+   
+   .button_top {
+       position: absolute;
+       color: #ffffff;
+       font: bold 14px "Arial Black";
+       padding: 10px 20px;
+       text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+       text-transform: uppercase;
+       text-decoration: none;
+       text-align: center;
+       cursor: pointer;
+       outline: none;
+       border: none;
+       background: #A2B300;
+       background-color: -webkit-linear-gradient(top, #A2B300, #93A500);
+       background-color: -moz-linear-gradient(top, #A2B300, #93A500);
+       background-color: -ms-linear-gradient(top, #A2B300, #93A500);
+       background-color: -o-linear-gradient(top, #A2B300, #93A500);
+       background-color: linear-gradient(to bottom, #A2B300, #93A500);
+       -webkit-box-shadow: 0px 4px 1px -1px #5B6600;
+       -moz-box-shadow: 0px 4px 1px -1px #5B6600;
+       box-shadow: 0px 4px 1px -1px #5B6600;
+       -webkit-transition: background-color .3s ease;
+       -moz-transition: background-color .3s ease;
+       -ms-transition: background-color .3s ease;
+       -o-transition: background-color .3s ease;
+       transition: background-color .3s ease;
+       z-index: 2;
+   }
+   
+   
+   .button_top:active {
+       border: none;
+       margin-top: 0px;
+       -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+       box-shadow: none;
+       -webkit-transition: all .1s ease;
+       -moz-transition: all .1s ease;
+       -ms-transition: all .1s ease;
+       -o-transition: all .1s ease;
+       transition: all .1s ease;
+   
+   }
+   
+   .registration {
+       margin-left: 921px;
+       margin-top: -91px;
+       font-size: 11px;
+   }
+   
+   .enter {
+       margin-left: 1122px;
+       margin-top: -91px;
+       font-size: 11px;
+   }
+   </style>
+       <div class="toolbar">
+   <div class="main-container f32" style="display:;">
+   <div class="trans_lang">
+   <div class="button_top trans_lang_btn" >
+   <span class="flag_l" style="background: url(/img/flags/en.png?id=1) no-repeat;" style="float: left;margin-top: -1px;margin-left: -9px;"></span>
+   <span class="lang-set">EN</span><i class="down-lang"></i>
+   </div>
+   <div class="drop-content-lang">
+   <p onclick="SelectLanguage('en')" class="f_d_l"><span class="flag_l" style="background: url(/img/flags/en.png?id=1) no-repeat;"></span>English</p>
+   <p onclick="SelectLanguage('es')" class="f_d_l"><span class="flag_l" style="background: url(/img/flags/es.png) no-repeat;"></span>Español</p>
+   <p onclick="SelectLanguage('fr')" class="f_d_l"><span class="flag_l" style="background: url(/img/flags/fr.png) no-repeat;"></span>Français</p>
+   <p onclick="SelectLanguage('tr')" class="f_d_l"><span class="flag_l" style="background: url(/img/flags/tr.png) no-repeat;"></span>Türkçe</p>
+   <p onclick="SelectLanguage('br')" class="f_d_l"><span class="flag_l" style="background: url(/img/flags/br.png) no-repeat;"></span>Português</p>
+   <p onclick="SelectLanguage('ru')" class="f_d_l"><span class="flag_l" style="background: url(/img/flags/ru.png) no-repeat;"></span>Русский</p>
+   </div>
+   </div>
+   
+   
+   <script>
+   
+   function SelectLanguage(language){
+         $.ajax({
+           type: "POST",
+           url: "/ajax/language.php",
+           dataType: "text",
+           data: {
+             NewLanguage: language
+           },
+           success: function(response) {
+           window.location.replace(window.location.href);
+           },
+         });
+   };
+   
+   $( ".trans_lang_btn" ).click(function() {
+     $( ".drop-content-lang" ).toggleClass('display-block');
+   });
+   </script>
+   </div>
+   
+   </div>
+   <style>
+   .lm {
+       font-size: 15px;
+       color: #ffebc9;
+       text-shadow: 1px 1px 1px #000, 1px 0px 3px black;
+       font-size: 15px;
+       color: #ffebc9;
+       padding: 3px;
+       padding-left: 5px;
+       padding-right: 5px;
+       background: rgba(152, 116, 98, 0.21);
+       border-radius: 5px;
+   }
+   
+   .hd-menu a {
+   
+       text-shadow: 1px 1px 1px #000, 1px 0px 3px black;
+   
+       font-size: 15px;
+       color: #ffebc9;
+   
+       }
+   
+   
+       .hm {
+   
+       text-shadow: 1px 1px 1px #000, 1px 0px 3px black;
+   
+       font-size: 15px;
+       color: #ffebc9;
+   
+           text-shadow: 1px 1px 1px #000, 1px 0px 3px black;
+       font-size: 15px;
+       color: #ffebc9;
+       padding: 3px;
+       padding-left: 5px;
+       padding-right: 5px;
+       background: rgba(130, 77, 51, 0.32);
+       border-radius: 5px;
+       }
+   
+   
+       .faq {
+       width: 147px;
+       height: 132px;
+       position: absolute;
+       margin: -127px 1033px;
+       background: url(/img/faq-new.png) no-repeat;
+       opacity: 0.9;
+       }
+   
+   .faq:hover {
+   opacity: 1
+   }
+   .faq a{
+     width: 135px;
+     height: 132px;
+     margin: 0 0 0 0;
+     display: inline-block;
+   }
+       .video {
+       width: 116px;
+       height: 81px;
+       position: absolute;
+       margin: 12px 1045px;
+       background: url(/img/topdesktube.png) 7px 3px no-repeat;
+       opacity: 0.9;
+   
+   }
+   
+   .video:hover {opacity: 1}
+   
+   .hd-menu{
+   float: left;
+   list-style: none;
+   font-family: "Tahoma";
+   margin: 130.5px 0px 70px 203px;
+   width: 950px;
+   }
+   .hd-menu li{position: absolute;}
+   .hd-menu li:nth-child(1){margin: 22px 16px 0px 110px;}
+   .hd-menu li:nth-child(2){margin: 36px 15px 0px 257px;}
+   .hd-menu li:nth-child(3){margin: 42px 15px 0px 403px;}
+   .hd-menu li:nth-child(4){margin: 26px 15px 0px 549px;}
+   .hd-menu li:nth-child(5){margin: 18px 15px 2px 707px;}
+   .hd-menu li:nth-child(6){margin: 22px 15px 0px 856px;}
+   </style>
+   
+   <style>
+   .button_top{
+     font: bold 14px "Arial";
+   }
+   .down-lang {
+   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+   border: solid #ffebc6;
+   border-width: 0 2px 2px 0;
+   display: inline-block;
+   padding: 3px;
+   position: absolute;
+   margin: 4px 0px 0px 10px;
+   box-shadow: 1.2px 1.2px 1px rgba(0, 0, 0, 0.9);
+   }
+   
+   
+   .drop-lang {
+   position: absolute;
+   display: inline-block;
+   cursor: pointer;
+   width: 44px;
+   height: 38px;
+   margin-top: 6px;
+   border-right: 1px solid #ccc;
+   padding-right: 8px;
+   margin-left: 7px;
+   }
+   
+   .trans_lang{
+   width: 101px;
+   height: 35px;
+   margin-left: 1295px;
+   margin-top: -39px;
+   position: absolute;
+   cursor: pointer;
+   }
+   .trans_lang_btn{
+   width: 57px;
+   height: 19px;
+   border-radius: 47px;
+   padding: 3px 20px;
+   }
+   .drop-lang:hover,.button_top:hover .drop-content-lang, .trans_lang:hover .drop-content-lang{
+   display: block;
+   cursor: pointer;
+   }
+   .drop-lang:focus,.button_top:focus .drop-content-lang, .trans_lang:focus .drop-content-lang{
+   display: block;
+   cursor: pointer;
+   }
+   
+   .drop-content-lang{
+   display:none;
+   outline: none;
+   border: none;
+   background: #90a715;
+   position: absolute;
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+   text-align: center;
+   cursor: pointer;
+   /* -webkit-box-shadow: 0px 4px 1px -1px #5B6600; */
+   -moz-box-shadow: 0px 4px 1px -1px #5B6600;
+   box-shadow: 0px 4px 1px -1px #4c2f17;
+   -webkit-transition: background-color .3s ease;
+   -moz-transition: background-color .3s ease;
+   -ms-transition: background-color .3s ease;
+   -o-transition: background-color .3s ease;
+   transition: background-color .3s ease;
+   text-transform:none;
+   margin: 19px 0px 0px 1px;
+   padding: 5px 0px 5px 0;
+   padding-top: 11px;
+   opacity: 0.95;
+   background-color: #796c2b;
+   min-width: 94px;
+   z-index: 1;
+   font-size: 12px;
+   color: #ffebc9;
+   font-weight:600;
+   }
+   
+   .f_d_l {
+   padding: 8px;
+   align-content: center;
+   margin: 0;
+   }
+   
+   .f_d_l:hover{
+   background: #7f7c2c;
+   }
+   
+   .flag_l {
+   background-size: 22px !important;
+   height: 22px;
+   width: 22px;
+   float: left;
+   margin-top: -2px;
+   margin-left: -2px;
+   padding-right: 5px;
+   }
+   
+   
+   .lang-set{
+   text-shadow: 1px 1px 1px #000, 1px 0px 3px black;
+   font-size: 15px;color: #ffebc9;
+   margin: 0px 0px 0px -9px;
+   text-transform: uppercase;
+   }
+   
+   .h-bird-0{
+   position: absolute;
+   width: 92px;
+   height: 104px;
+   margin: -117px 0 0px 18px;
+   background: url(/img/birds/beige.png) no-repeat;
+   background-size: 92px 104px;
+   background-size: 88px 100px;
+   }
+   .h-bird-1{
+   position: absolute;
+   width: 100px;
+   height: 104px;
+   margin: -123px 0 0px 21px;
+   background: url(/img/birds/green.png) no-repeat;
+   background-size: 97px 106px;
+   }
+   .h-bird-2{
+   position: absolute;
+   width: 88px;
+   height: 116px;
+   margin: -128px 0 0px 32px;
+   background: url(/img/birds/yellow.png) no-repeat;
+   background-size: 88px 116px;
+   }
+   .h-bird-3{
+   position: absolute;
+   width: 77px;
+   height: 124px;
+   margin: -138px 0 0px 35px;
+   background: url(/img/birds/brown.png) no-repeat;
+   background-size: 77px 124px;
+   }
+   .h-bird-4{
+   position: absolute;
+   width: 98px;
+   height: 107px;
+   margin: -138px 0 0px 21px;
+   background: url(/img/birds/blue.png) no-repeat;
+   background-size: 98px 107px;
+   background-size: 99px 104px;
+   -webkit-transform: scaleX(-1);
+   -moz-transform: scaleX(-1);
+   -o-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
+   }
+   .h-bird-6{
+   position: absolute;
+   width: 120px;
+   height: 145px;
+   margin: -159px 0 0px 3px;
+   background: url(/img/birds/king-bird.png) no-repeat;
+   background-size: 126px 150px;
+   }
+   /* 897px 0 0px 604px */
+   </style>
+   
+   
+   <ul class="hd-menu">
+   <li><div class="h-bird-2"></div><a href="/" class="current go_yellow lm">Main</a></li>
+   <li><div class="h-bird-3"></div><a href="/withdraws" class="go_brown lm">Payments</a><div style="z-index: 0;" class="new"></div></li>
+   <li><div class="h-bird-1"></div><a href="/rules" class="go_red lm">Rules</a></li>
+   <li><div class="h-bird-0"></div><a href="/about" class="go_green lm">About</a></li>
+   <li><div class="h-bird-4"></div><a class="go_blue lm" href="/calculate">Calculate</a></li>
+   <li><div class="h-bird-6"></div><a class="go_king lm" href="/support/all">Support</a></li>
+   <div class="faq" href="/faq" style=""><a href="/faq"></a></div>
+   <a class="video" href="/video" style=""></a>
+   </ul>
+   </div>
+   <div class="content">
+   <div class="cl-left" id="menu-left"><div class="menu-left-div"><style>
+   .slis {
+       -webkit-transform: translatex(0);
+       transform: translatex(0);
+       opacity: -10;
+       -webkit-transition: -webkit-transform 0.70s ease-in-out 0.1s, opacity 0.70s ease-in-out 0.1s;
+       transition: transform 0.70s ease-in-out 0.1s, opacity 0.70s ease-in-out 0.1s;
+       -webkit-perspective: 1000;
+       -webkit-backface-visibility: hidden;
+       -webkit-transform: translatex(0);
+       transform: translatex(0);
+       opacity: 1;
+       -webkit-transition: -webkit-transform 0.30s ease-in-out 0.1s, opacity 0.30s ease-in-out 0.1s;
+       transition: transform 0.30s ease-in-out 0.1s, opacity 0.30s ease-in-out 0.1s;
+       -webkit-perspective: 1000;
+       -webkit-backface-visibility: hidden;
+   }
+   
+   .btn_in {
+       border-radius: 5px;
+   
+   }
+   .btn_reg {
+       border-radius: 5px;
+   
+   }
+   .phover {
+   
+   
+       background: #efefef;
+       border: 1px solid #ddd;
+       border-radius: 5px;
+       color: #222;
+       margin: 8px 0px 5px 0px;
+       padding: 3px 0px 3px 0px;
+       cursor: pointer;
+       width: 160px;
+       font-family: "Tahoma";
+       font-size: 14px;
+       font-weight: bold;
+       transition: all 0.3s ease;
+       -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+       font-weight: normal !important;
+       background: none !important;
+       border: 1px solid #be8f58 !important;
+   
+       margin: 8px 0px 5px 0px;
+       padding: 3px 0px 4px 0px;
+       color: #222;
+       cursor: pointer;
+       width: 120px !important;
+       border-radius: 5px;
+   }
+   
+   
+   .phover:hover {
+       background: #be8f58 !important;
+       color: #fff;
+       border: 1px solid #be8f58;
+       -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.7);
+       -moz-box-shadow: 0px 1px 5px rgba(0,0,0,0.7);
+       box-shadow: 0px 1px 5px rgba(0,0,0,0.7);
+   
+   }
+   
+   
+   .why-1 {
+   opacity:0;
+   transition: all 0.4s linear;
+   }
+   
+   .btn_btn{
+       background: #efefef;
+       border: 1px solid #ddd;
+       border-radius: 5px;
+       color: #222;
+       margin: 8px 0px 5px 0px;
+       padding:4px 0px 3px 0px;
+       cursor:pointer;
+       width: 160px;
+       font-family: "Tahoma"; font-size: 14px; font-weight: bold;
+       transition: all 0.3s ease;
+       -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+   
+   }
+   </style>
+   <div class="autoriz">
+   <div class="prof-title"><p>Sign in account</p></div>
+   
+   <form action="/login" method="post" id='log-in-form-1'>
+   <div id="login2" style="display: none;" class="why-1">
+   <table  width="200" border="0" align="center" style="margin-top: 0px;">
+   <tbody>
+   <tr>
+   <td align="center" style="">
+   </td></tr>
+   
+   <tr>
+   <td colspan="2" align="center" valign="top"><input name="captcha" class="lg" type="text" size="25" maxlength="50" /></td>
+   </tr>
+    <tr height="5">
+   <td align="center" colspan="2" valign="top"><input type="submit" value="Enter" class="btn_btn btn_in"/></td>
+   </tr>
+   </tbody>
+   </table>
+   </div>
+   
+   <div id="login1">
+   <table width="200" border="0" align="center" style="margin-top: 0px;">
+   <tbody>
+   <tr>
+   <td colspan="2">Email:<br><input  onkeypress="return noenter()"  name="log_email" type="text" size="23" maxlength="35" class="lg"></td>
+   </tr>
+   <tr>
+   <td colspan="2">Password [<a href="/recovery" class="rs-ps">Forgot password?</a>]:<br><input onkeypress="return noenter()" name="pass" type="password" size="23" maxlength="35" class="ps"></td>
+   </tr>
+   
+   <tr height="5">
+   <script type="text/javascript">
+   function onSubmit_LogIn(token) {
+   document.getElementById("log-in-form-1").submit();
+   }
+   
+   function noenter() {
+     if (window.event && window.event.keyCode == 13){
+   $("#btn_login").click();
+     return !(window.event && window.event.keyCode == 13);
+    }else
+       return true;}
+   </script>
+   
+   <td align="center" valign="top">
+   <button class="btn_btn btn_in h-captcha" id="btn_login" data-sitekey="4318ee7b-0caf-4473-b4d6-1e49834097f8" data-size="invisible" data-callback='onSubmit_LogIn'>Enter</button>
+   </td>
+   </form>  <td align="center" valign="top"><p style="font-size:14px; " onclick="location.href='/signup';"  class="reg phover" >Registration</p></td>
+   </tr>
+   </tbody>
+   </table>
+   </div>
+   
+   </div>
+   <script type="text/javascript">
+   
+   function ToggleHiden1(a){
+   var e=document.getElementById(a);
+   document.getElementById("login1").style.display="none";
+   
+   document.getElementById("login2").style.display="block";
+       setTimeout(function () {
+   
+   document.getElementById("login2").style.opacity="1";
+       }, 50);
+   
+   
+   }
+   
+   
+   
+   
+   </script>
+   
+   
+   <style>
+   
+   .st_new_button{
+   
+       height: 27px !important;
+   
+       width: 191px !important;
+   
+       font-size: 14px !important;
+   
+       margin: 16px 0 0 -3px !important;
+   
+       text-transform: none !important;
+   
+       padding-top: 5.6px !important;
+   
+   }
+   
+   .st_new_button:hover{
+   
+       height: 27px !important;
+   
+     font-size: 14px !important;
+   
+     margin: 16px 0 0 -3px !important;
+   
+     text-transform: none !important;
+   
+     padding-top: 5.6px !important;
+   
+   }
+   
+   .st-rg {
+   
+       padding: 0;
+   
+           float: left;
+   
+        margin: 0px 6px 0px 149px;
+   
+       smargin: 0px 6px 0px 173px;
+   
+   }
+   
+   
+   
+   .statistic{
+   
+       height: 235px;
+   
+       background: url(/img/statistic-panel-2.png) no-repeat;
+   
+       border: 0px solid #848484;
+   
+       border-radius: 10px;
+   
+       padding-bottom: 25px;
+   
+       margin: 20px 0px 0px 0px;
+   
+       text-align: center;
+   
+   }
+   
+   
+   
+   .stats-line {
+   
+       font-size: 14px;
+   
+       line-height: 29px;
+   
+       text-align: center;
+   
+   }
+   
+   .stats-line-st {
+   
+     font-size: 14px;
+   
+     font-weight: bold;
+   
+       color: #27A021;
+   
+       text-align: center;
+   
+   }
+   
+   </style>
+   
+   
+   
+   <div class="statistic">
+   
+   <div class="prof-title"><p>Statistics</p></div>
+   
+   <table width="300px" cellspacing="0" border="0" align="center">
+   
+   <tbody>
+   
+   <tr>
+   
+   <td class="stats-line">All participants:</td>
+   
+   <td class="stats-line-st">2828420 Users</td>
+   
+   </tr>
+   
+   <tr>
+   
+   <td class="stats-line">New for 24 hours:</td>
+   
+   <td class="stats-line-st">1231 Users</td>
+   
+   </tr>
+   
+   <tr>
+   
+   <td class="stats-line">Active today:</td>
+   
+   <td class="stats-line-st">12694 Users</td>
+   
+   </tr>
+   
+   </tbody>
+   
+   </table>
+   
+   
+   
+       <div class="st-btn">
+   
+           <button onclick="location.href='/signup';" class="new_button st_new_button" style="">Create account</button>
+   
+       </div>
+   
+   </div>
+   
+   
+   <div class="stat" style="padding-top: 5px;">
+       <div class="h-title" style="font-family: sans-serif;">Payment systems:</div>
+       <div class="cntrl-ps">
+       </div>
+   </div>
+   </div>
+   </div></div>
+   <div class="cl-right content_s" id="content_s">
+   <span id="content_block" style="display: contents;">
+   
+   </body>
+   </html>
+   <style>
+   .shriftmob {
+       font-family: inherit;
+       font-weight: 600;
+   }
+   .shriftstac {
+   font-family: initial;
+   font-weight: 500;
+   font-size: 22;
+   }
+   </style>
+   <style>
+   ul.general {
+       font-size: 19px;
+       list-style: none;
+       line-height: 35px;
+       margin-left: 25px;
+       color: #27A021;
+       width: 631px;
+       padding: 0;
+   }
+   .imgmargin {margin-left: 14px;}
+   .mrg_auto{margin: 0 auto !important;}
+   .align_c{text-align: center;}
+   .size24{font-size: 24px;}
+   .land_ribbon{
+       background: url(../img/main-header.png) no-repeat;
+       display: inline-block;
+       width: 626px;
+       height: 73px;
+       line-height: 2;
+       font-family: Segoe Print;
+       font-weight: 800;
+   }
+   .white {color: #ffffff !important;}
+   .general_title {
+       font-family: SegoePrintRegular,Arial;
+       font-size: 37px;
+       font-weight: normal;
+       color: #617a32;
+       display: table-cell;
+       white-space: pre;
+       padding: 0 0.5em;
+   }
+   .seperator {
+       width: 50%;
+       display: table-cell;
+       height: 5px;
+       position: relative;
+       vertical-align: middle;
+   }
+   .seperator .sep_line {
+       position: relative;
+       width: 100%;
+       height: 5px;
+       display: block;
+       background: url(/img/separator.png) repeat-x;
+       top: 1px;
+   }
+   </style>
+   
+   <div class="silver-bk_index" style="width: 682px;margin: 35px 0px 0px -42px;margin-top: 34px;">
+   <div class="f-left full_width align_c size24" style=" margin-top: -75px;">
+   
+           <div class="land_ribbon white">
+               <span style="vertical-align:middle;
+       margin-left: 0px;    text-shadow: 1px 1px 2px #121558;
+       padding-bottom: 10">Earn money by playing!</span>
+           </div>
+   
+       </div>
+   <div class="intro-header">
+   <h2 style="margin-top: 20px; padding-bottom:10px;color: #2d2d2d;"><center class="shriftstac">Coin Farm with money withdrawal<br>Stable earnings with our affiliate program</h2>
+   </div>
+   
+   <style>
+   .intro-s{
+       position: absolute;
+       font-size: 1.015em;
+       font-weight: 600;
+       width: 187px;
+       color: #4c4c4b;
+       text-shadow: 0px 0px 0px #efe9d3, 1px 1px 2px #f7f4eb;
+   }
+   
+   .intro-s-1{margin: -215px 0px 0px 143px;}
+   .intro-s-2{margin: -215px 0px 0px 476px;}
+   .intro-s-3{margin: -79px 0px 0px 143px;}
+   .intro-s-4{margin: -94px 0px 0px 476px;}
+   
+   .intro-s-4-es{margin: -94px 0px 0px 476px;width: 223px !important;}
+   .intro-s-4-fr{margin: -94px 0px 0px 476px;width: 223px !important;}
+   .intro-s-2-tr{margin: -215px 0px 0px 476px;width: 227px !important;}
+   .intro-s-4-tr{margin: -110px 0px 0px 476px;width: 227px !important;}
+   .intro-s-3-ru{margin: -84px 0px 0px 143px;}
+   .intro-s-4-ru{margin: -84px 0px 0px 476px;}
+   
+   .gift-ru{margin-left: -12px !important;}
+   .gift-en{margin-left: -38px !important;}
+   .gift-es{margin-left: -38px !important;}
+   .gift-fr{margin-left: -38px !important;}
+   .gift-tr{margin-left: -38px !important;}
+   </style>
+   
+   <div class="intro-body" style="margin-top: 262px;">
+   <img src="/img/intro/step-1.png" style="position: absolute;
+   margin: -260px 0px 0px -4px;
+   width: 134px;">
+   <img src="/img/intro/step-2.png" style="position: absolute;
+   margin: -251px 0px 0px 330px;
+   width: 134px;">
+   <img src="/img/intro/step-3.png" style="position: absolute;
+   margin: -109px 0px 0px -4px;
+   width: 134px;">
+   <img src="/img/intro/step-4.png" style="position: absolute;
+   margin: -109px 0px 0px 330px;
+   width: 134px;">
+   <span class="intro-s intro-s-1 intro-s-1-en"><a href='/account/farm'>Buy birds</a>, they will lay eggs for you</span>
+   <span class="intro-s intro-s-2 intro-s-2-en">Eggs will be stored in the <a href='/account/store'>warehouse</a>, collect them</span>
+   <span class="intro-s intro-s-3 intro-s-3-en"><a href='/account/market'>Sell eggs</a> and you will get gold</span>
+   <span class="intro-s intro-s-4 intro-s-4-en">Invite friends, exchange resources for <a href='/account/payment'>real money</a> and buy more birds to get more income!</span>
+   </div>
+   <script>
+   $('.intro-body a').each(function () {
+       var $this = $(this),
+           href = $this.attr('href');
+       $this.attr('href', "/signup");
+   })
+   </script>
+                   <div class="mrg_auto width90p">
+                               <span class="seperator"><span class="sep_line"></span></span>
+                               <h4 class="general_title">Start right now</h4>
+                               <span class="seperator"><span class="sep_line"></span></span>
+                </div>
+   
+   <style>
+   .btn-index {
+       width: 250px;
+       height: 48.5px;
+       background: url(/img/notify/btn-main.png) no-repeat;
+       background-size: 250px 48.5px;
+       margin: 5px 0 11px 0;
+       z-index: 2;
+       display: inline-block;
+       font-weight: 600;
+       border: none;
+       cursor: pointer;
+       outline: none;
+       font-family: Segoe Print;
+       color: #ffffff;
+       font-family: "Arial Black";
+       font-size: 15px;
+       text-shadow: 0px 1px 2px rgb(75, 84, 33);
+       text-transform: uppercase;
+       text-decoration: none;
+       transition: background-color .3s ease;
+       line-height: 46px;
+   }
+   .btn-index:hover{
+       color: #e9f6a7;
+   }
+   .btn-index:active{
+       margin: 6px 0 10px 0;
+   }
+   
+   .btn-index-ru {font-size: 17px;text-transform: none;line-height: 44px;}
+   
+   .gift-table{
+       margin-top:25px;
+   }
+   .gift-table td{
+       width: 50%;
+   }
+   .gift-text{
+       font-size: 1.115em !important;
+       font-weight: 600;
+       color: #4c4c4b;
+       text-shadow: 0px 0px 0px #efe9d3, 1px 1px 2px #f7f4eb;
+       margin-top: 3px;
+   }
+   .gift-text-en{font-size: 1.195em !important;padding-left: 41px;}
+   .gift-text-es{font-size: 1.195em !important;padding-left: 41px;}
+   .gift-text-tr{font-size: 1.195em !important;padding-left: 41px;}
+   .gift-text-ru{font-size: 1.115em !important;}
+   
+   </style>
+   
+   <center>
+   <table class="gift-table">
+     <tbody>
+     <tr>
+   <td>
+     <p class="gift-text gift-text-en">Sign Up right now <br>and get «<font color='#539200'>Green</font>» bird <br>+300 gold coins as a gift</p>
+   </td>
+   <td>
+    <img src="/img/gift-gold.png"  style="margin-left:-6px;margin-top:-21px;width: 351px;">
+   </td>
+     </tr>
+     </tbody>
+   </table>
+   
+   <span type="button" onclick="window.location.href='/signup'"  class="btn-index btn-index-en">Create account</span>
+   </center>
+                         <div class="mrg_auto width90p">
+                               <span class="seperator"><span class="sep_line"></span></span>
+                               <h4 class="general_title">Our advantages</h4>
+                               <span class="seperator"><span class="sep_line"></span></span>
+   </div>
+   
+   
+   <style>
+   div.item {
+       vertical-align: top;
+       display: inline-block;
+       text-align: center;
+       width: 163px;
+   }
+   .caption {
+   display: block;
+   font-size: 1.3em;
+   font-weight: 600;
+   color: #464646;
+   text-shadow: 0px 0px 0px #efe9d3, 1px 1px 2px #f7f4eb;
+   font-family: initial;
+   margin-top:5px;
+   }
+   </style>
+   <div id="why" style="display:;padding-left:10px;margin:20px 0;vertical-align:top;">
+     <div class="item"><img alt="Fund" src="/img/benefits/1.png" loading="eager" style="width: 119px;width: 124px;height: 134px;"><span class="caption">Reserve fund</span></div>
+     <div class="item"><img alt="Payback" src="/img/benefits/2.png" loading="eager" style="width: 144px;"><span class="caption">Payments</span></div>
+     <div class="item"><img alt="Stability" src="/img/benefits/3.png" loading="eager" style="width: 157px;"><span class="caption">Stability</span></div>
+     <div class="item"><img alt="Technical support" src="/img/benefits/4.png" loading="eager" style="width: 153px;"><span class="caption">24/7 Support</span></div>
+   </div>
+   
+   
+               <div class="mrg_auto width90p">
+                               <span class="seperator"><span class="sep_line"></span></span>
+                               <h4 class="general_title">Current sale</h4>
+                               <span class="seperator"><span class="sep_line"></span></span>
+                </div>
+   
+   
+   
+   
+   <style>
+   
+     .bs-index{margin-top:6px;}
+   
+     .bs-index .sale_all {
+       position: absolute;
+       font-size: 24.5px;
+       margin: 27px 0px 0px 137px;
+       font-weight: 600;
+       width: 527px !important;
+       color: #ffdb51;
+       text-shadow: 0px 0px 5px #110000, 2px 1px 2px #0d0607;
+     }
+   
+     .bs-index .sale_s {
+       position: absolute;
+       font-size: 21px;
+       font-weight: 500;
+       width: 430px !important;
+       color: white;
+       text-shadow: 0px 0px 0px #040101, 1px 1px 2px #0d0607;
+     }
+   
+     .bs-index .sale_s1 {margin: 35px 0px 0px 137px;}
+     .bs-index .sale_s2 {margin: 35px 0px 0px 137px;}
+     .bs-index .sale_s3_1 {margin: 35px 0px 0px 137px;}
+       .bs-index .sale_s3_2 {margin: 35px 0px 0px 252px;}
+     .bs-index .sale_s4_1 {margin: 35px 0px 0px 137px;}
+     .bs-index .sale_s4_2 {margin: 35px 0px 0px 252px;}
+   
+     .bs-index .sale_s_double {margin-top: 24px !important;width: 377px !important;}
+   
+     .bs-index .sale_ts {
+       text-shadow: 0px 0px 0px #111111, 1px 1px 2px #000000;
+       color: #f1f1f1;
+       font-size: 20px;
+       font-weight: 600;
+     }
+   
+     .bs-index .sale_sn {
+       position: absolute;
+       font-weight: 600;
+       font-size: 21px;
+       width: 49px;
+       color: #ffd73c;
+       text-shadow: 0px 0px 3px #040101, 1px 1px 2px #0d0607;
+     }
+   
+     .bs-index .sale_sn {margin: 35px 0px 0px -24px;}
+       .bs-index .sale_rb {width: 692px; width: 703px; margin-left: -31px;}
+     .bs-index .sale_b {position: absolute;}
+   
+     .bs-index .EUR_b_1 {width: 49px;margin: 7px 0 0 28px;}
+       .bs-index .EUR_b_2 {width: 58px;margin: 17px 0 0 21px;}
+       .bs-index .EUR_b_3_1 {width: 67px;margin: 14px 0 0 18px;}
+       .bs-index .EUR_b_3_2 {width: 49px;margin: 7px 0 0 148px;}
+       .bs-index .EUR_b_4_1 {width: 67px;margin: 14px 0 0 18px;}
+       .bs-index .EUR_b_4_2 {width: 58px;margin: 16px 0 0 140px;}
+     .bs-index .EUR_b_5_1 {width: 67px;margin: 5px 0 0 16px;}
+     .bs-index .EUR_b_5_2 {width: 67px;margin: 16px 0 0 139px;}
+   
+   
+   
+       .bs-index .USD_b_1 {width: 49px;margin: 7px 0 0 28px;}
+       .bs-index .USD_b_2 {width: 58px;margin: 17px 0 0 21px;}
+       .bs-index .USD_b_3_1 {width: 67px;margin: 14px 0 0 18px;}
+       .bs-index .USD_b_3_2 {width: 49px;margin: 7px 0 0 148px;}
+       .bs-index .USD_b_4_1 {width: 67px;margin: 14px 0 0 18px;}
+       .bs-index .USD_b_4_2 {width: 58px;margin: 16px 0 0 140px;}
+     .bs-index .USD_b_5_1 {width: 67px;margin: 5px 0 0 16px;}
+     .bs-index .USD_b_5_2 {width: 67px;margin: 16px 0 0 139px;}
+   
+       .bs-index .RUB_b_1 {width: 57px;margin: 8px 0 0 26px;}
+       .bs-index .RUB_b_2 {width: 49px;margin: 7px 0 0 29px;}
+       .bs-index .RUB_b_3_1 {width: 58px;margin: 16px 0 0 22px;}
+       .bs-index .RUB_b_3_2 {width: 58px;margin: 8px 0 0 145px;}
+       .bs-index .RUB_b_4_1 {width: 67px;margin: 14px 0 0 18px;}
+       .bs-index .RUB_b_4_2 {width: 49px;margin: 6px 0 0 148px;}
+     .bs-index .RUB_b_5_1 {width: 67px;margin: 14px 0 0 18px;}
+     .bs-index .RUB_b_5_2 {width: 58px;margin: 16px 0 0 143px;}
+   
+     .bs-index .BTC_b_1 {width: 49px;margin: 7px 0 0 28px;}
+       .bs-index .BTC_b_2 {width: 58px;margin: 17px 0 0 21px;}
+       .bs-index .BTC_b_3_1 {width: 67px;margin: 14px 0 0 18px;}
+       .bs-index .BTC_b_3_2 {width: 49px;margin: 7px 0 0 148px;}
+       .bs-index .BTC_b_4_1 {width: 67px;margin: 14px 0 0 18px;}
+       .bs-index .BTC_b_4_2 {width: 58px;margin: 16px 0 0 140px;}
+     .bs-index .BTC_b_5_1 {width: 67px;margin: 5px 0 0 16px;}
+     .bs-index .BTC_b_5_2 {width: 67px;margin: 16px 0 0 139px;}
+   
+   
+   
+     .bs-mini {width: 540px; margin-top:6px;}
+   
+     .bs-mini .sale_all {
+       position: absolute;
+       font-size: 20.5px;
+       margin: 22px 0px 0px 111px;
+       font-weight: 600;
+       width: 527px !important;
+       color: #ffdb51;
+       text-shadow: 0px 0px 5px #110000, 2px 1px 2px #0d0607;
+     }
+   
+     .bs-mini .sale_s {
+       position: absolute;
+       font-size: 17px;
+       font-weight: 500;
+       width: 442px !important;
+       color: white;
+       text-shadow: 0px 0px 0px #040101, 1px 1px 2px #0d0607;
+     }
+   
+     .bs-mini .sale_s1 {margin: 29px 0px 0px 112px;}
+     .bs-mini .sale_s2 {margin: 29px 0px 0px 112px;}
+     .bs-mini .sale_s3_1 {margin: 29px 0px 0px 137px;}
+     .bs-mini .sale_s3_2 {margin: 29px 0px 0px 206px;}
+     .bs-mini .sale_s4_1 {margin: 29px 0px 0px 137px;}
+     .bs-mini .sale_s4_2 {margin: 29px 0px 0px 206px;}
+   
+     .bs-mini .sale_ts {
+       text-shadow: 0px 0px 0px #111111, 1px 1px 2px #000000;
+       color: #f1f1f1;
+       font-size: 16.7px;
+       font-weight: 600;
+     }
+   
+     .bs-mini .sale_sn {
+       position: absolute;
+       font-weight: 600;
+       font-size: 18px;
+       width: 49px;
+       color: #ffd73c;
+       text-shadow: 0px 0px 3px #040101, 1px 1px 2px #0d0607;
+     }
+   
+     .bs-mini .sale_rb {width: 573px; margin-left: -31px;}
+     .bs-mini .sale_sn {margin: 29px 0px 0px -24px;}
+     .bs-mini .sale_b {position: absolute;}
+   
+     .bs-mini .EUR_b_1 {width: 41px;margin: 5px 0 0 18px;}
+       .bs-mini .EUR_b_2 {width: 48px;margin: 14px 0 0 13px;}
+       .bs-mini .EUR_b_3_1 {width: 57px;margin: 11px 0 0 8px;}
+       .bs-mini .EUR_b_3_2 {width: 41px;margin: 5px 0 0 117px;}
+       .bs-mini .EUR_b_4_1 {width: 57px;margin: 11px 0 0 8px;}
+       .bs-mini .EUR_b_4_2 {width: 48px;margin: 14px 0 0 111px;}
+   
+       .bs-mini .USD_b_1 {width: 41px;margin: 5px 0 0 18px;}
+       .bs-mini .USD_b_2 {width: 48px;margin: 14px 0 0 13px;}
+       .bs-mini .USD_b_3_1 {width: 57px;margin: 11px 0 0 8px;}
+       .bs-mini .USD_b_3_2 {width: 41px;margin: 5px 0 0 117px;}
+       .bs-mini .USD_b_4_1 {width: 57px;margin: 11px 0 0 8px;}
+       .bs-mini .USD_b_4_2 {width: 48px;margin: 14px 0 0 111px;}
+   
+       .bs-mini .RUB_b_1 {width: 44px;margin: 9px 0 0 17px;}
+       .bs-mini .RUB_b_2 {width: 41px;margin: 6px 0 0 18px;}
+       .bs-mini .RUB_b_3_1 {width: 48px;margin: 13px 0 0 12px;}
+       .bs-mini .RUB_b_3_2 {width: 44px;margin: 10px 0 0 116px;}
+       .bs-mini .RUB_b_4_1 {width: 56px;margin: 12px 0 0 9px;}
+       .bs-mini .RUB_b_4_2 {width: 41px;margin: 6px 0 0 116.5px;}
+   
+     .bs-mini .BTC_b_1 {width: 41px;margin: 5px 0 0 18px;}
+       .bs-mini .BTC_b_2 {width: 48px;margin: 14px 0 0 13px;}
+       .bs-mini .BTC_b_3_1 {width: 57px;margin: 11px 0 0 8px;}
+       .bs-mini .BTC_b_3_2 {width: 41px;margin: 5px 0 0 117px;}
+       .bs-mini .BTC_b_4_1 {width: 57px;margin: 11px 0 0 8px;}
+       .bs-mini .BTC_b_4_2 {width: 48px;margin: 14px 0 0 111px;}
+   
+   
+   </style>
+   
+   <div class="bs-index">
+    <span class="sale_s sale_s1">At the replenishment above <span class='sale_ts'>10 EUR</span></span>
+    <span class="sale_sn sale_sn">x1</span>
+    <img class="sale_b EUR_b_1" loading="eager" src="/img/birds/brown.png">    <img class="sale_rb" loading="eager" src="/img/bonus_b_1.png">
+   </div>
+   
+   <div class="bs-index">
+    <span class="sale_s sale_s2">At the replenishment above <span class='sale_ts'>50 EUR</span></span>
+    <span class="sale_sn sale_sn">x1</span>
+    <img class="sale_b EUR_b_2" loading="eager" src="/img/birds/blue.png">    <img class="sale_rb" loading="eager" src="/img/bonus_b_1.png">
+   </div>
+   
+   <div class="bs-index">
+    <span class="sale_s sale_s3_2 ">At the replenishment above <span class='sale_ts'>100 EUR</span></span>
+    <span class="sale_sn sale_sn">x1</span>
+        <img class="sale_b EUR_b_3_1" loading="eager" src="/img/birds/red.png">
+       <img class="sale_b EUR_b_3_2" loading="eager" src="/img/birds/brown.png">
+    <img class="sale_rb" loading="eager" src="/img/bonus_b_2.png">
+   </div>
+   
+   
+   <div class="bs-index">
+    <span class="sale_s sale_s4_2 ">At the replenishment above <span class='sale_ts'>250 EUR</span></span>
+    <span class="sale_sn sale_sn">x2</span>
+        <img class="sale_b EUR_b_4_1" loading="eager" src="/img/birds/red.png">
+       <img class="sale_b EUR_b_4_2" loading="eager" src="/img/birds/blue.png">
+    <img class="sale_rb" loading="eager" src="/img/bonus_b_2.png">
+   </div>
+   
+   
+   <div class="bs-index">
+    <span class="sale_s sale_s4_2 ">At the replenishment above <span class='sale_ts'>500 EUR</span></span>
+    <span class="sale_sn sale_sn">x1</span>
+        <img class="sale_b EUR_b_5_1" loading="eager" src="/img/birds/king-bird.png">
+       <img class="sale_b EUR_b_5_2" loading="eager" src="/img/birds/red.png">
+    <img class="sale_rb" loading="eager" src="/img/bonus_b_2.png">
+   </div>
+   
+   </div>
+   
+                               </span></div>
+                               <div class="clr"></div>
+   
+   
+   
+   <style>
+   
+   .bottom_tree {
+       line-height: 3;
+           background: url(/img/bg/field.png) no-repeat 0px 0px;
+               background-size: 1341px 277px;
+           width: 1341px;
+           height: 269px;
+           z-index: -500;
+   }
+   
+   .footer {
+       margin: 0 auto;
+       width: 1285px;
+           position: relative;
+   display: block;
+   }
+   .footer-text{
+   position: absolute;
+   margin-top: -24px;
+   color: #f7f7f7;
+   font-size: 13px;
+   width: 1341px;
+   text-align: center;
+   }
+   .noselect {
+     -webkit-touch-callout: none;
+       -webkit-user-select: none;
+        -khtml-user-select: none;
+          -moz-user-select: none;
+           -ms-user-select: none;
+            -o-user-select: none;
+               user-select: none;
+   }
+   </style>
+   
+   <div class="footer">
+   <div class="bottom_tree"></div>
+   <center>
+   <div class="footer-text">coin-farm.net - ALL RIGHTS RESERVED - DDoS Protected, SSL Certified - Supported by <a style="color:#f7f7f7;" href="https://cloudflare.com/" target="_blank">Cloudflare</a></div>
+   </center>
+   </div>
+   
+   
+   
+       <!--<script src="/js/no_selection.js"></script>	-->
